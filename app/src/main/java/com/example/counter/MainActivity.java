@@ -63,12 +63,18 @@ public class MainActivity extends AppCompatActivity {
         outState.putInt("key",count); // запись необходимых данных в контейнер Bundle
 
         // размещаем вспомогательный тост (контекст, сообщение, длительность сообщения)
-        Toast toast = Toast.makeText(this, "запись данных в контейнер Bundle", Toast.LENGTH_SHORT);
+        Toast toast = Toast.makeText(this, "Запись данных в контейнер Bundle", Toast.LENGTH_SHORT); // инициализация
+        toast.show(); // демонстрация тоста на экране
     }
 
     @Override
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
+        count = savedInstanceState.getInt("key"); // возврат данных из контейнера Bundle по ключу
+
+        Toast toast = Toast.makeText(this, "Считывание данных из контейнера Bundle", Toast.LENGTH_SHORT); // инициализация
+        toast.show(); // демонстрация тоста на экране
+
     }
 
     @Override
