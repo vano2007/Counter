@@ -60,6 +60,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
+        outState.putInt("key",count); // запись необходимых данных в контейнер Bundle
+
+        // размещаем вспомогательный тост (контекст, сообщение, длительность сообщения)
+        Toast toast = Toast.makeText(this, "запись данных в контейнер Bundle", Toast.LENGTH_SHORT);
     }
 
     @Override
