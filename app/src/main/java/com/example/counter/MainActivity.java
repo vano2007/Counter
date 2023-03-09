@@ -1,5 +1,6 @@
 package com.example.counter;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -54,6 +55,16 @@ public class MainActivity extends AppCompatActivity {
         toast.setGravity(Gravity.LEFT, 0,0); // задание позиции на экране (положение, смещение по оси Х, смещение по оси Y)
         toast.show(); // демонстрация тоста на экране
         super.onStop();
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
     }
 
     @Override
